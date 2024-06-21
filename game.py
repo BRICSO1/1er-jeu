@@ -25,7 +25,7 @@ if g==1:
         else:
             break
     print("C'est fini!")
-else:
+elif g==2:
 # 2nd game 
     while True:
         from random import randint
@@ -47,3 +47,31 @@ else:
         else:
             break
     print("C'est fini!")
+    # third game 
+else:    
+    def jouer_pierre_papier_ciseaux():
+        print("Bienvenue au jeu Pierre-Papier-Ciseaux!")
+        choix_possibles = ["pierre", "papier", "ciseaux"]
+    
+        while True:
+            choix_joueur = input("Entrez votre choix (pierre, papier, ciseaux) ou 'quitter' pour arrêter: ").lower()
+        
+            if choix_joueur == 'quitter':
+                print("Merci d'avoir joué!")
+                break
+            elif choix_joueur not in choix_possibles:
+                print("Choix invalide. Veuillez réessayer.")
+                continue
+
+            choix_ordinateur = random.choice(choix_possibles)
+            print(f"L'ordinateur a choisi : {choix_ordinateur}")
+
+            if choix_joueur == choix_ordinateur:
+                print("C'est une égalité!")
+            elif (choix_joueur == "pierre" and choix_ordinateur == "ciseaux") or \
+                (choix_joueur == "papier" and choix_ordinateur == "pierre") or \
+                (choix_joueur == "ciseaux" and choix_ordinateur == "papier"):
+                print("Vous avez gagné!")
+            else:
+                print("Vous avez perdu!")
+print("merci d'avoir jouer")
