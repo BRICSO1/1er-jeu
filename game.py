@@ -8,7 +8,7 @@ if g==1:
         try2=0
         a=randint(1,r1)
         b=0
-        while b!=a & try1<=try2:
+        while b!=a & try1>=try2:
             b=int(input("Choisez un nombre entre 1 et ",r1," : "))
             try2=tyr2+1
             if b>a:
@@ -34,13 +34,15 @@ elif g==2:
         try2=0
         a=randint(1,r1)
         b=0
-        while b!=a & try1<=try2:
+        while b!=a & try1>=try2:
             b=int(input("Choisez un nombre entre 1 et ",r1," : "))
             try2=tyr2+1
             if b<r1+20 or b>r1-20:
                 print("tu es proche")
             if b==a:
                 print("bravo tu a touvé le bon nombre") 
+            else:
+                print("tu es loin")
         c=input("Rejouez ? ")
         if c==True :
             print("On continue")
@@ -50,11 +52,12 @@ elif g==2:
     # third game 
 else:    
     def jouer_pierre_papier_ciseaux():
+        
         print("Bienvenue au jeu Pierre-Papier-Ciseaux!")
         choix_possibles = ["pierre", "papier", "ciseaux"]
     
         while True:
-            choix_joueur = input("Entrez votre choix (pierre, papier, ciseaux) ou 'quitter' pour arrêter: ").lower()
+            choix_joueur = input("Entrez votre choix (pierre, papier, ciseaux) ou 'quitter' pour arrêter: ")
         
             if choix_joueur == 'quitter':
                 print("Merci d'avoir joué!")
@@ -63,8 +66,8 @@ else:
                 print("Choix invalide. Veuillez réessayer.")
                 continue
 
-            choix_ordinateur = random.choice(choix_possibles)
-            print(f"L'ordinateur a choisi : {choix_ordinateur}")
+            choix_ordinateur = randint(choix_possibles)
+            print(F"L'ordinateur a choisi : {choix_ordinateur}")
 
             if choix_joueur == choix_ordinateur:
                 print("C'est une égalité!")
@@ -74,4 +77,5 @@ else:
                 print("Vous avez gagné!")
             else:
                 print("Vous avez perdu!")
+    jouer_pierre_papier_ciseaux()
 print("merci d'avoir jouer")
