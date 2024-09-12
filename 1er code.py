@@ -1,7 +1,7 @@
 # # #exemple
 # # A= float(input("Un nombre : "))
 # # print(A)
-# # B= float(input("Un autre nombre : "))
+# # B= input("Un autre nombre : ")
 # # print(B)
 # # M=(A+B/2)
 
