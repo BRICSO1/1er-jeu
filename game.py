@@ -52,7 +52,11 @@ elif g==2:
     # third game 
 else:    
     def jouer_pierre_papier_ciseaux():
-        
+        """
+        Permet de jouer à pierre papier ciseaux
+        input : str
+        output : str
+        """
         print("Bienvenue au jeu Pierre-Papier-Ciseaux!")
         choix_possibles = ["pierre", "papier", "ciseaux"]
     
